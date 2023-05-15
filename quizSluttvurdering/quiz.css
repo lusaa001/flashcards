@@ -1,0 +1,184 @@
+/* generelt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+body {
+    font-family: cursive;
+}
+    
+a {
+    text-decoration: none;
+}
+    
+li {
+    list-style: none;
+}
+
+/*navigasjonsbar*/
+.navbar {
+    display: flex; /*gjør elementene fleksible, og er nyttig for en mer responsive nettside*/
+    align-items: center; /*ganske selvforklarende, sentrerer teksten*/
+    justify-content: space-between; /*gjør at de to elementen kommer på hver sin side på navbaren*/
+    padding: 20px;
+    background-color: teal;
+    color: #fff;
+   }
+   .nav-links a {
+    color: #fff;
+   }
+   /* LOGO */
+   .logo {
+    font-size: 32px; /*fontsizen til der det står Budapest*/
+   }
+   /* NAVBAR MENU */
+   .menu {
+    display: flex; /*mer responsive nettside for andre skjermer*/
+    gap: 1em; /*avstanden mellom linkene i navbaren*/
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: #4c9e9e; /*farge når man har pila på en link*/
+    border-radius: 5px; /*gjør det fargede stede rundere*/ 
+    transition: 0.3s ease; /*fargen kommer mer sakte*/
+   }
+   .menu li {
+    padding: 5px 14px; /*gjør linkene mer utfyldene*/
+   }
+   /* DROPDOWN MENU */
+   .dagbokLink {
+    position: relative; /*gjør slik at den bever på seg hvis et annet element skulle komme i veien*/ 
+   }
+   .dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute; /**/
+    display: none; /*gjør at dropdown menyen ikke vises*/
+    border-radius: 8px;
+    top: 35px;
+   }
+   .dropdown li + li {
+    margin-top: 10px;
+   }
+   .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+   .dropdown li:hover {
+    background-color: #4c9e9e;
+   }
+   .dagbokLink:hover .dropdown {
+    display: block; /*gjør at display:none; ikke gjeldes lenger slik at dropdowner vises*/
+   }
+
+
+   .parent {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr) repeat(2, 0fr);
+    grid-template-rows: repeat(4, 2fr) 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color:rgb(170, 255, 255);
+    margin:50px;
+    padding:30px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 3 / 2; } /*plassen de forskjellige grid elementene skal ta*/
+    .div2 { grid-area: 1 / 2 / 3 / 3; }
+    .div3 { grid-area: 1 / 3 / 3 / 4; }
+    .div4 { grid-area: 3 / 3 / 5 / 4; }
+    .div5 { grid-area: 3 / 2 / 5 / 3; }
+    .div6 { grid-area: 3 / 1 / 5 / 2; }
+
+#gridDivId {
+    padding:20px; /*spesifiserer stilen jeg vil ha på gridelementene*/
+    background-color:white;
+    border:3px solid #cccccc
+    
+}
+
+/*kropp og quizens*/
+
+.panel{
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.question-container{
+    margin: 10px;
+    padding: 5px;
+    width: 80vw;
+    height: 10vh;
+    background-color: #c7dddf;
+    font-size: x-large;
+    text-align: center;
+     
+}
+.result{
+    margin: 10px;
+    padding: 5px;
+    width:80vw;
+    height: 10vh;
+    text-align: center;
+    font-size: 50px;
+     
+}
+.option-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 5px;
+    width: 80vw;
+    height: 20vh;
+    background-color: #9eb1b3;  
+       
+}
+.option{   
+    padding: 10px;
+    width: 15vw;
+    height: 10vh;
+    font-size: larger;
+    background-color: lightskyblue;
+    border-radius: 25%;
+}
+.option:hover{
+    background-color: lightgoldenrodyellow;
+}
+.navigation{
+    width: 80vw;
+    height: 10vh;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    background-color:#c7dddf;
+}
+ 
+.evaluate,.next{
+    width:30vw;
+    height: 8vh;
+    padding: 5px;
+    font-size: larger;
+}
+.evaluate{
+   
+    background-color: #50DBB4;
+}
+.next{
+    color: white;
+    background-color: #BF3325;
+}
+
+/*div for index.html*/
+#hoved {
+    width: 60%;                /* bredde: 60 % av vinduet */
+    margin: 100px auto;        /* 100 px over elementet, auto midtstiller det */
+    padding: 40px;             /* luft mellom kantlinjene og innholdet */
+    background-color: white;   /* hvit bakgrunnsfarge */
+    border: 1px solid #cccccc; /* grå kantlinje */
+}
